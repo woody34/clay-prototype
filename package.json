@@ -21,7 +21,17 @@
     "export": "next export",
     "test": "jest --watch",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "docker:build": "docker build -t clay/image --label clay .",
+    "docker:create": "docker create --restart=always -p 3000:3000 --name clay clay/image:latest",
+    "docker": "docker start clay",
+    "docker:logs": "docker logs clay",
+    "docker:stop": "docker stop clay",
+    "docker:rm": "docker rm clay",
+    "heroku:build": "heroku container:login && heroku container:push web --remote heroku",
+    "heroku:release": "heroku container:release web --remote heroku",
+    "heroku:open": "heroku open --remote heroku",
+    "heroku:deploy": "npm run heroku:build && npm run heroku:release && npm run heroku:open"
   },
   "dependencies": {
     "next": "10.0.5",
