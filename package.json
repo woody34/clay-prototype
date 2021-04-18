@@ -17,7 +17,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "cross-env NODE_ENV=production next build",
-    "start": "next start",
+    "start": "next start -p 3000",
+    "start:ci": "next start -p $PORT",
     "export": "next export",
     "test": "jest --watch",
     "storybook": "start-storybook -p 6006 -s public",
@@ -100,5 +101,6 @@
     "moduleNameMapper": {
       "\\.svg": "<rootDir>/__mocks__/svgrMock.js"
     }
-  }
+  },
+  "license": "MIT"
 }

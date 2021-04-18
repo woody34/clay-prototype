@@ -4,4 +4,4 @@
 npm ci
 
 # Generate build folder
-npm run export
+# npm run build

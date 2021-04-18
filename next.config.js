@@ -45,5 +45,5 @@ module.exports = {
   images: {
     domains: ["unsplash.com"]
   },
-  outDir: 'build',
+  distDir: 'build',
 }
