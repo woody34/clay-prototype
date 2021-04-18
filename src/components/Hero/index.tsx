@@ -11,9 +11,7 @@ export const Hero: React.FC<HeroProps> = (
   return (
     <>
       <div className="w-60 h-60 flex flex-col items-center justify-center mx-auto">
-        <a href="https://www.elitizon.com" hrefLang="en">
-          <Logo />
-        </a>
+        <Logo />
       </div>
 
       <section className="text-gray-600 body-font">
